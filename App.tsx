@@ -3,9 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <View style={styles.container} className="text-4xl">
+      <Text className="bg-red-100">Open up App.tsx to start working on your app..!</Text>
       <StatusBar style="auto" />
+     
     </View>
   );
 }
