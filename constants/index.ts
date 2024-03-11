@@ -2,7 +2,7 @@ export const categories=[
     {
         id:1,
         name:"Pizza",
-        image:require("../assets/images/pizza.png")
+        image:require("../assets/images/images.jpeg")
     },
     {
         id:2,
@@ -17,12 +17,12 @@ export const categories=[
     {
         id:4,
         name:"Chinese",
-        image:require("../assets/images/pizza.png")
+        image:require("../assets/images/images.jpeg")
     },
     {
         id:5,
         name:"Chinese",
-        image:require("../assets/images/pizza.png")
+        image:require("../assets/images/images.jpeg")
     }
 ]
 
