@@ -13,7 +13,7 @@ export default function Categories() {
                     return(
                         <View key={index} className='flex justify-center items-center mr-6'>
                             <TouchableOpacity className='p-1 rounded-full shadow bg-gray-200'>
-                                <Image style={{width:45,height:45}} source={category.image} />
+                                <Image style={{width:55,height:55}} source={category.image} />
                             <Text>{category.name}</Text>
                             </TouchableOpacity>
                         </View>
