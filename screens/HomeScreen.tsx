@@ -5,11 +5,12 @@ import * as Icon from "react-native-feather"
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { themeColors } from '../theme'
 import Categories from '../components/Categories'
+import FeaturedRow from '../components/FeaturedRow'
 export default function HomeScreen() {
   return (
     <SafeAreaView className='bg-white '>
-   <StatusBar style='dark'/>
-   <View className='flex-row items-center  space-x-2 px-4 pb-2'>
+   <StatusBar style='light' backgroundColor={themeColors.bgColor(1)}/>
+   <View className='flex-row items-center pt-3 space-x-2 px-4 pb-2'>
     <View className='flex-row flex-1 items-center p-3 rounded-full border border-gray-300'>
         <Icon.Search height="25" width="23" stroke="gray" />
         <TextInput placeholder='Restaurants' className='ml-2 flex-1' />
@@ -26,7 +27,18 @@ export default function HomeScreen() {
    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{
     paddingBottom:20
    }}>
+    {/* categories */}
     <Categories/>
+    {/* featued */}
+    <View className='mt-5'>
+        {
+          [1,2,3,4].map((item:any,index)=>{
+            return(
+              <FeaturedRow key={index} item={item}/>
+            )
+          })
+        }
+    </View>
    </ScrollView>
     </SafeAreaView>
   )
