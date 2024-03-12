@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native'
 export default function RestuarantCard({resturant}:any) {
     const navigation:any =useNavigation()
   return (
-   <TouchableOpacity onPress={()=>navigation.navigate(["Resturant",{...resturant}])}>
+   <TouchableOpacity onPress={()=>navigation.navigate("Resturant",{...resturant})}>
     <View style={styles.card} className='mr-6 bg-white  rounded-3xl mt-3'>
     <Image className='h-36 w-64 rounded-t-3xl' source={require("../assets/images/burger-p.jpg")}/>
     <View className='px-3 pb-4 space-y-2'>
