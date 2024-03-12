@@ -4,6 +4,7 @@ import { useNavigation, useRoute } from '@react-navigation/native'
 import * as Icon from "react-native-feather"
 import { themeColors } from '../theme'
 import { StatusBar } from 'expo-status-bar'
+import DishRow from '../components/DishRow'
 export default function ResturantScreen() {
   const {params}=useRoute()
   const navigation=useNavigation()
@@ -22,7 +23,33 @@ export default function ResturantScreen() {
         <View style={{borderTopLeftRadius:40,borderTopRightRadius:40}} className='bg-white -mt-12 pt-6'>
           <View className='px-5'>
             <Text className='font-bold text-3xl'>Papa Johns</Text>
+            <View className='flex-row space-x-2 my-1'>
+            <View className='flex-row items-center space-x-1'>
+            <Image className='h-6 w-4' source={require("../assets/images/star.jpeg")}/>
+            <Text className='text-green-700'>4</Text>
+            <Text className='text-gray-700'>| 400k- review 
+                <Text className='font-semibold'>| Feast Food</Text>
+            </Text>
+        </View>
+        <View className='flex-row items-center space-x-1'>
+           <Icon.MapPin color="gray" width="15" height="15"/> 
+        <Text className='text-gray-700 text-sm'>Nearby - 3526 Lagos,Ikeja.</Text>
+        </View>
+            </View>
+            <Text className='text-gray-500 mt-2'>Soft and tender friend chicken</Text>
           </View>
+        </View>
+        <View className='pb-36 bg-white'>
+          <Text className='px-4 text-2xl font-bold'>Menu</Text>
+          {
+            [1,2,2,3].map((item,i)=>{
+              return(
+               
+<DishRow key={i}/>
+              
+              )
+            })
+          }
         </View>
     </ScrollView>
     </View>
