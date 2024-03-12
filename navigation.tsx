@@ -10,7 +10,7 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>
         <Stack.Screen name='Home' component={HomeScreen}/>
-        <Stack.Screen name='Resraurant' component={ResturantScreen}/>
+        <Stack.Screen name='Resturant' component={ResturantScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
    
